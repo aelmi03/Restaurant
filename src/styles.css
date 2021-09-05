@@ -51,8 +51,8 @@ h1{
 }
 
  img{
-    width:80%;
-    height:70%;
+    width:8rem;
+    height:6rem;
     border-radius: 10px;
 }
 
@@ -64,15 +64,15 @@ h1{
     display:flex;
     flex-flow: row wrap;
     width:80%;
-    height:90%;
-    background-color: black;
+    min-height:50%;
+    background-color: rgb(236, 225, 225);
     opacity: 0.85;
     position: absolute;
     right:50%;
     justify-content: space-around;
+    align-items: center;
     top:25%;
     border-radius: 10px;
-    align-items: center;
     padding: 1em 1em;
     transform: translateY(-25%);
     transform:translateX(50%);
@@ -80,12 +80,13 @@ h1{
 .menu-card{
     opacity: 1;
     width:48%;
-    height:40%;
+    margin-top:1em;
+    min-width:9.1rem;
     margin: 0em 0.1em;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(41, 32, 32);
     border-radius: 10px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.6rem;
     font-style: italic;
     display:flex;
     flex-flow:column nowrap;
@@ -94,5 +95,51 @@ h1{
 }
 
 .menu-card > p{
-    font-weight: bolder;;
+    font-weight: bolder;
+    color:white;
 }
+@media screen and (max-width: 320px) {
+    .menu-content{
+        min-height: 45%;
+    
+    }
+    .menu-card{
+        width:80%;
+        margin-top: 0.5em;
+    }
+   
+ }
+@media screen and (min-width: 768px) {
+    .menu-content{
+        min-height: 45%;
+    }
+    .menu-card{
+        font-size: 1.1rem;
+        margin-top: 0.5em;
+
+    }
+    .menu-card > img{
+        width:10rem;
+        height:9rem;
+        border-radius: 10px;
+
+       }
+ }
+@media screen and (min-width: 1000px) {
+   .menu-content{
+       min-height: 20%;
+   }
+   .menu-card{
+       margin-top: 1em;
+       font-size:1.3rem;
+       margin-top: 0.5em;
+
+   }
+   .menu-card > img{
+    width:16rem;
+    height:15rem;
+    border-radius: 10px;
+   }
+ 
+}
+
