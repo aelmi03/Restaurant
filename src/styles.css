@@ -1,5 +1,12 @@
 html{
     height:100%;
+
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+
 }
 body{
     background: url("../src/restaurantBackground.jpeg.jpeg") no-repeat center center fixed;
@@ -21,24 +28,30 @@ h1{
 }
 
 .nav-bar{
+    margin-left:1px;
+    border-radius: 10px;
+    margin-top:1em;
     width:100%;
+    height: 2.2rem;
     display:flex;
-    background-color:white;
+    color:white;
+    background-color:rgb(0, 0, 0);
     justify-content: space-around;
+    align-items: center;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
 .home-content{
-    visibility: hidden;
-    width:60%;
+    width:80%;
     position: absolute;
     right:50%;
+    color:white;
     top:30%;
     transform: translateY(-30%);
     transform:translateX(50%);
-    height: 20rem;
-    background-color: white;
+    height: 40%;
+    background-image: linear-gradient(180deg, rgb(10, 10, 109), rgb(14, 7, 7));
     border-radius: 10px;
     opacity: 0.9;
     text-align: center;
@@ -46,13 +59,14 @@ h1{
     padding: 1em 1em;
     font-style: italic;
     display:flex;
+    justify-content: space-around;
     flex-flow:column nowrap;
     align-items: center;
 }
 
- img{
-    width:8rem;
-    height:6rem;
+ .home-content > img{
+    width:60%;
+    height:50%;
     border-radius: 10px;
 }
 
@@ -61,16 +75,19 @@ h1{
     font-style: normal;
 }
 .menu-content{
-    display:flex;
-    flex-flow: row wrap;
+    visibility: hidden;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
     width:80%;
     min-height:50%;
     background-color: rgb(236, 225, 225);
+    grid-template-rows: minmax(40%,auto);
+    gap:0.5em;
     opacity: 0.85;
     position: absolute;
     right:50%;
     justify-content: space-around;
-    align-items: center;
+    align-content:center;
     top:25%;
     border-radius: 10px;
     padding: 1em 1em;
@@ -79,10 +96,8 @@ h1{
 }
 .menu-card{
     opacity: 1;
-    width:48%;
-    margin-top:1em;
-    min-width:9.1rem;
-    margin: 0em 0.1em;
+    gap: 12px;
+    min-width:8.1rem;
     background-color: rgb(41, 32, 32);
     border-radius: 10px;
     text-align: center;
@@ -91,6 +106,7 @@ h1{
     display:flex;
     flex-flow:column nowrap;
     align-items: center;
+    padding: 0.3em 0;
     justify-content: space-around;
 }
 
@@ -98,24 +114,38 @@ h1{
     font-weight: bolder;
     color:white;
 }
-@media screen and (max-width: 320px) {
+
+.menu-card> img{
+   width:95%; 
+}
+@media screen and (max-width: 340px) {
+    .menu-card{
+        min-width:6.1rem;
+    }
+   
+ }
+@media screen and (max-width: 375px) {
     .menu-content{
         min-height: 45%;
-    
     }
     .menu-card{
         width:80%;
-        margin-top: 0.5em;
     }
    
  }
 @media screen and (min-width: 768px) {
+    .home-content{
+        font-size: 1.7rem;
+    }
+    .nav-bar{
+        margin-top: 1.9em;
+        margin-left:0.15em;
+    }
     .menu-content{
         min-height: 45%;
     }
     .menu-card{
         font-size: 1.1rem;
-        margin-top: 0.5em;
 
     }
     .menu-card > img{
@@ -126,19 +156,28 @@ h1{
        }
  }
 @media screen and (min-width: 1000px) {
+    .nav-bar{
+        font-size:1.6rem;
+        height:3rem;
+        margin-left: 0.2em;
+    }
    .menu-content{
+       width:60%;
        min-height: 20%;
    }
    .menu-card{
        margin-top: 1em;
        font-size:1.3rem;
-       margin-top: 0.5em;
 
    }
    .menu-card > img{
     width:16rem;
     height:15rem;
     border-radius: 10px;
+   }
+
+   .home-content{
+       height:55%;
    }
  
 }
