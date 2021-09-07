@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'MidWest';
+    src: url('./Rye-Regular.ttf') format('truetype');
+    font-weight:600;
+}
+@font-face {
+    font-family: 'MedievalTimes';
+    src: url('./AkayaTelivigala-Regular.ttf') format('truetype');
+    font-weight:600;
+}
 html{
     height:100%;
 
@@ -18,11 +28,14 @@ body{
     width:100%;
     height: 100%;
 }
-h1{
+div,h2,h3,h4,p{
+    font-family: 'MedievalTimes';
+}
+h1{ 
     color:white;
     text-shadow:black 2px 2px 2px;
     text-align: center;
-    font-family:Impact, 'Arial Narrow Bold', sans-serif;
+    font-family:'MidWest';
     font-size: 3rem;
     font-weight: bolder;
 }
@@ -133,7 +146,7 @@ h1{
     transform:translateX(50%);
 }
 .menu-card{
-    transition:transform 300ms ease-in;
+    transition:transform 200ms ease-in;
     opacity: 1;
     gap: 12px;
     min-width:8.1rem;
@@ -163,6 +176,7 @@ h1{
 }
 
 .contact-content{
+    overflow: hidden;
     visibility: hidden;
     position: absolute;
     display: flex;
@@ -184,7 +198,7 @@ h1{
     color:black;
 }
 .location{
-    height:40%;
+    height:60%;
 }
 .contact-content > h1{
     justify-self: flex-start;
@@ -196,9 +210,21 @@ h1{
     max-width: 25rem;
     margin-top:0.5em;
 }
+.price{
+    font-family: "MidWest";
+    font-size:0.6rem;
+}
 @media screen and (max-width: 340px) {
     .menu-card{
         min-width:6.1rem;
+    }
+    .menu-content,
+    .contact-content,
+    .home-content{
+        margin-top:2em;
+    }
+    .price{
+        font-size: 0.5rem;
     }
    
  }
@@ -235,6 +261,9 @@ h1{
     .contact-content{
         font-size: 1.3rem;
         height:65%;
+    }
+    .price{
+        font-size:1rem;
     }
  }
 @media screen and (min-width: 1000px) {

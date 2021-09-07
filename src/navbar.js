@@ -2,7 +2,7 @@
 const loadNavBarAndTitle = function(){
     const mainContainer = document.querySelector("#content");
     const title = document.createElement("h1");
-    title.textContent = "Lucky's Grill";
+    title.textContent = "Lucky's Steakhouse";
     const mainNavDiv = document.createElement("div");
     mainNavDiv.classList.add("nav-bar");
    
