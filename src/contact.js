@@ -1,6 +1,7 @@
 import googleMapPic from './googleMap.png';
 
 const contactContainer = function(){
+    const mainContainer = document.querySelector("#content");
     const contactCard = document.createElement("div");
     contactCard.classList.add("contact-content");
     const contactTitle = document.createElement("h1");
@@ -46,6 +47,7 @@ const contactContainer = function(){
    }
    addHoursText();
    addLocationText();
+   mainContainer.appendChild(contactCard);
    return {hideContact,showContact};
 
 }
